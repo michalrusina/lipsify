@@ -1,5 +1,5 @@
 /*
- * Lipsify v1.0.0 09/10/2014
+ * lipsify v1.0.0 09/10/2014
  * http://github.com/michalrusina/lipsify
  *
  * Michal Rusina
