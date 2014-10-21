@@ -1,5 +1,8 @@
 {
+	"authors": [
+		"Michal Rusina <email@michalrusina.sk> (http://www.michalrusina.sk)"
+	],
+	"license": "MIT",
 	"name": "lipsify",
-	"version": "1.0.0",
 	"main": "public/lipsify.js"
 }
