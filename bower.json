@@ -1,8 +1,13 @@
 {
-	"authors": [
-		"Michal Rusina <email@michalrusina.sk> (http://www.michalrusina.sk)"
-	],
-	"license": "MIT",
-	"name": "lipsify",
-	"main": "public/lipsify.js"
+  "name": "lipsify",
+  "description": "Random Lorem ipsum... text instead of #, ##, ### and ####",
+  "main": "lipsify.js",
+  "keywords": [
+    "loremipsum",
+    "js"
+  ],
+  "authors": [
+    { "name": "Michal Rusina", "email": "email@michalrusina.sk", "homepage": "http://michalrusina.sk" }
+  ],
+  "license": "MIT"
 }
