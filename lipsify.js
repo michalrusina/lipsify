@@ -1,19 +1,6 @@
-/*
- * lipsify v1.0.0 09/10/2014
- * http://github.com/michalrusina/lipsify
- *
- * Michal Rusina
- * email@michalrusina.sk
- *
- */
-
-
-/* jshint maxlen:2000 */
-
+/*! github.com/michalrusina/lipsify */
 
 function lipsify(options) {
-	'use strict';
-
 	function init(options) {
 		var counters = {},
 			node = (options && options.node) ? options.node : document.body,
