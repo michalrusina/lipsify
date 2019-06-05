@@ -49,7 +49,7 @@ function lipsify(options) {
 					if (attributes.hasOwnProperty(i)) {
 						var attr = attributes[i];
 
-						if (exceptions.indexOf(attr.nodeName) === -1) {
+						if (exceptions.indexOf(attr.nodeName) === -1 &&	attr.nodeName.indexOf('data-') == -1) {
 							attr.value = replaceString(attr.value);
 						}
 					}
