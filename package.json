@@ -1,0 +1,26 @@
+{
+  "name": "lipsify",
+  "version": "2.0.0",
+  "description": "Random Lorem Ipsum Generator",
+  "author": {
+    "name": "Michal Rusina",
+    "email": "michalrusina@gmail.com",
+    "url": "https://www.michalrusina.sk"
+  },
+  "main": "dist/lipsify.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:js && npm run build:min",
+    "build:js": "cp src/lipsify.js dist/lipsify.js",
+    "build:min": "terser src/lipsify.js -o dist/lipsify.min.js -c -m",
+    "lint": "eslint src/**/*.js",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "eslint": "^9.39.1",
+    "terser": "^5.0.0"
+  }
+}

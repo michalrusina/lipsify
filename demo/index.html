@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipsify Demo</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        h1, h2 { color: #333; }
+        p { line-height: 1.6; margin-bottom: 1em; }
+        .example { background-color: #f9f9f9; padding: 10px; border-left: 3px solid #007bff; margin-bottom: 1em; }
+        .dynamic-content { margin-top: 20px; padding: 15px; border: 1px dashed #007bff; background-color: #e6f7ff; }
+    </style>
+</head>
+<body>
+    <h1>Lipsify.js Demo</h1>
+    <p>This page demonstrates the functionality of the Lipsify.js library, which replaces placeholders with "Lorem Ipsum" text.</p>
+
+    <h2>Basic Placeholders</h2>
+    <div class="example">
+        <p>One word: §</p>
+        <p>A phrase: §§</p>
+        <p>One sentence: §§§</p>
+        <p>One paragraph: §§§§</p>
+    </div>
+
+    <h2>Word Count Placeholders</h2>
+    <div class="example">
+        <p>Exactly 5 words: §5§</p>
+        <p>Random words (3 to 8): §3§6§</p>
+    </div>
+
+    <h2>Attribute Replacement</h2>
+    <div class="example">
+        <button data-attribute="§§§">Check out my data-attribute</button>
+        <input type="text" value="§3§" placeholder="§§">
+        <a href="#" title="§">Link Title</a>
+    </div>
+
+    <h2>Dynamic Content (MutationObserver)</h2>
+    <p>Click the button below to add new content. Lipsify should automatically process it.</p>
+    <button id="addContentBtn">Add Dynamic Content</button>
+    <div id="dynamicContainer" class="dynamic-content">
+        <!-- Dynamic content will be added here -->
+        <p>Initial dynamic content area.</p>
+    </div>
+
+    <!-- Unminified version for development -->
+    <script src="../dist/lipsify.js"></script>
+
+    <script>
+        document.getElementById('addContentBtn').addEventListener('click', () => {
+            const container = document.getElementById('dynamicContainer');
+            const newDiv = document.createElement('div');
+            newDiv.innerHTML = `
+                <h3>New Content Added!</h3>
+                <p>This is a new paragraph with a phrase: §§</p>
+                <p data-info="§§§">Another new element with a word: §</p>
+            `;
+            container.appendChild(newDiv);
+        });
+    </script>
+</body>
+</html>
